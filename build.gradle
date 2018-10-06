@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.aphasion.combatparser'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = "com.aphasion.combatparser.Application"
+
+dependencies {
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.7'
+
+    compileOnly 'org.projectlombok:lombok:1.18.2'
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.10.0'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
