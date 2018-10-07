@@ -1,3 +1,7 @@
+package events.types;
+
+import lombok.EqualsAndHashCode;
+
 public enum CombatEventType {
     COMBATANT_INFO,
     DAMAGE_SPLIT,

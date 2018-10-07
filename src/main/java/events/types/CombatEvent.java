@@ -1,6 +1,9 @@
-import lombok.Builder;
+package events.types;
 
-@Builder
+import events.Flags;
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class CombatEvent {
     public String date;
     public String time;
@@ -11,7 +14,4 @@ public class CombatEvent {
     public String destName;
     public Flags sourceFlags;
     public Flags destFlags;
-    public int spellID;
-    public String spellName;
-    public Spell spell;
 }
