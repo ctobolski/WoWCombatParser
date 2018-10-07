@@ -62,7 +62,7 @@ public class Mapper {
         return line.split(",");
     }
 
-    public <T extends CombatEvent> List<T> filterFrom(List<CombatEvent> unfilteredList, Class<T> targetClass) {
+    public <T extends CombatEvent> List<T> filterListFrom(List<CombatEvent> unfilteredList, Class<T> targetClass) {
         List<T> filteredList = unfilteredList.stream()
                 .filter(e ->  targetClass.isInstance(e))
                 .map(e-> (T) e)
